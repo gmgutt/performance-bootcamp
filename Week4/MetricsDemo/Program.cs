@@ -113,13 +113,13 @@ otel.WithTracing(tracing =>
         tracing.AddOtlpExporter(otlpOptions =>
         {
             otlpOptions.Endpoint = new Uri(tracingOtlpEndpoint);
-            otlpOptions.Protocol = OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf;
+            // otlpOptions.Protocol = OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf;
         });
         
-        tracing.AddJaegerExporter(options =>
-        {
-            options.Endpoint = new Uri("http://host.docker.internal:14268");
-        });
+        // tracing.AddJaegerExporter(options =>
+        // {
+        //     options.Endpoint = new Uri("http://host.docker.internal:14268");
+        // });
         
         //tracing.AddConsoleExporter();
     }
